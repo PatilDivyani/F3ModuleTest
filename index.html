@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+    }
+    body {
+      width: 100%;
+      height: 100vh;
+      overflow-x: hidden;
+    }
+    #title {
+      margin: 59px 0 0 41px;
+      color: #000;
+      font-size: 34px;
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    button {
+      width: 300px;
+      height: 60px;
+      border: none;
+      border-radius: 10px;
+      background: #000;
+      margin: 27px 0 0 41px;
+      color: #fff;
+      font-size: 24px;
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      /* display: none; */
+    }
+    .container {
+      visibility: hidden;
+      margin: 42px 0 0 41px;
+      
+      width: 94%;
+      color: #000;
+      font-size: 24px;
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    .container > .locDetails {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .locDetails > p {
+      padding: 5px 0;
+    }
+    .container > map > iframe {
+      width: 100%;
+      height: 650px;
+      margin-top: 20px;
+    }
+    .container > .info {
+      margin-top: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .container > input {
+      width: 99%;
+      height: 40px;
+      border-radius: 10px;
+      border: 3px solid #000;
+      margin-top: 30px;
+      padding: 0px 3px;
+      color: #000;
+      font-size: 25px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .container > .postalCardSection {
+      width: 100%;
+     
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+    .postalCardSection > .card {
+      margin: 0 auto;
+      padding: 0 25px;
+      padding-top: 20px;
+      width: 500px;
+      height: 250px;
+      border-radius: 10px;
+      border: 3px solid #000;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  </style>
+  <body>
+    <h1 id="title">MY Public IP ADDRESS :</h1>
+    <button id="getDataBtn" type="submit">Get Data</button>
+
+    <div class="container">
+      <div class="locDetails">
+        <p>Lat:</p>
+        <p>City:</p>
+        <p>Organisation:</p>
+        <p>Long:</p>
+        <p>Region:</p>
+        <p>Hostname:</p>
+      </div>
+      <map class="map">
+        <iframe
+          src="https://map s.google.com/maps?q=35.856737,10.606619&output=embed"
+          width="1408"
+          height="649"
+          frameborder="0"
+          style="border: 0"
+        ></iframe>
+      </map>
+      <div class="info">
+        <p>Time Zone:</p>
+        <p>Date And Time:</p>
+        <p>Pincode:</p>
+        <p>Message: Number of pincode(s) found:</p>
+      </div>
+      <input id="filter" type="text" placeholder="Filter" />
+      <div class="postalCardSection">
+        <div class="card">
+          <p>Name</p>
+          <p>Branch Type</p>
+          <p>Delivery Status</p>
+          <p>District</p>
+          <p>Division</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
